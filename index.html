@@ -7,377 +7,509 @@
 <title>For Loveee ♡</title>
 
 <style>
-:root {
-  --pink: #ff6f91;
-  --light: #fff0f5;
-  --dark: #87344f;
+* {
+  box-sizing: border-box;
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: "Trebuchet MS", sans-serif;
-  color: var(--dark);
-  background: #fff9fb;
+  color: #70243b;
+  background: #fff5f7;
+  text-align: center;
 }
-button { font: inherit; cursor: pointer; }
-nav {
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+header {
   padding: 22px;
-  text-align: center;
+  color: #e9577b;
   font-family: Georgia, serif;
-  font-size: 22px;
-  color: var(--pink);
+  font-style: italic;
+  font-size: 24px;
 }
+
 .hero {
-  min-height: 75vh;
-  padding: 90px 20px;
-  text-align: center;
-  display: grid;
-  place-content: center;
-  background: radial-gradient(circle, white, #ffdce7, #ffc2d5);
-  position: relative;
-  overflow: hidden;
+  padding: 85px 20px;
+  background: linear-gradient(135deg, #fffafd, #f9cad8);
+  border-radius: 0 0 45% 45%;
 }
-.script { font-family: Georgia, serif; font-style: italic; }
-.hero .script { font-size: 27px; }
-h1 {
-  font: bold clamp(55px, 12vw, 95px) Georgia, serif;
-  color: #d83d69;
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(48px, 10vw, 90px);
+  color: #bd365b;
   margin: 15px 0;
 }
+
 .hero p {
-  max-width: 450px;
-  margin: 10px auto 25px;
   line-height: 1.8;
+  max-width: 500px;
+  margin: 20px auto;
 }
-.btn {
-  background: var(--pink);
-  color: white;
+
+.script {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 23px;
+  color: #8f3b56;
+}
+
+main {
+  max-width: 950px;
+  margin: auto;
+  padding: 35px 20px 70px;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  color: #a12e50;
+  font-size: clamp(27px, 5vw, 40px);
+}
+
+.pill {
   border: none;
-  padding: 14px 25px;
-  border-radius: 50px;
-  box-shadow: 0 6px 18px #e65a7b35;
+  border-radius: 30px;
+  background: #e9577b;
+  color: white;
+  padding: 13px 24px;
+  margin: 6px;
+  box-shadow: 0 6px 18px #d7476c30;
   transition: transform .2s;
 }
-.btn:hover { transform: translateY(-3px); }
-section.content {
-  max-width: 850px;
-  padding: 65px 20px;
-  margin: auto;
+
+.pill:hover {
+  transform: translateY(-3px);
 }
-h2 {
-  text-align: center;
-  font: 32px Georgia, serif;
-  color: #bc3c62;
-}
-.subtitle {
-  text-align: center;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
-.paper {
+
+.letter {
   background: white;
-  padding: clamp(22px, 5vw, 40px);
-  border: 1px solid #f7d4df;
+  border: 1px solid #f5d6df;
   border-radius: 22px;
-  box-shadow: 0 10px 35px #87344f0c;
+  padding: 28px;
+  margin-top: 45px;
+  text-align: left;
   line-height: 1.9;
+  box-shadow: 0 12px 35px #8f2e4a12;
 }
-.paper p { margin: 0 0 18px; }
-.signoff { color: var(--pink); font: italic 23px Georgia, serif; }
-.grid {
+
+.dear, .signoff {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 23px;
+  color: #e9577b;
+}
+
+.reasons {
+  margin-top: 65px;
+}
+
+.reason-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
 }
+
 .reason {
+  padding: 22px 15px;
   background: white;
-  border: 1px solid #f6d5e0;
-  padding: 22px;
-  text-align: center;
+  border: 1px solid #f6d9e1;
   border-radius: 18px;
   line-height: 1.7;
-  transition: transform .2s;
 }
-.reason:hover { transform: translateY(-4px); }
-.emoji { font-size: 30px; }
+
+.reason span {
+  font-size: 30px;
+}
+
 .counter {
-  text-align: center;
-  padding: 45px 20px;
-  background: #ffe1eb;
-  border-radius: 24px;
+  margin-top: 60px;
+  padding: 28px;
+  background: #f9dce5;
+  border-radius: 22px;
+  line-height: 1.8;
 }
-#days {
-  font: bold clamp(55px, 12vw, 85px) Georgia, serif;
-  color: #d83d69;
+
+.number {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 65px;
+  color: #b5365b;
 }
+
 .special {
-  text-align: center;
-  background: linear-gradient(145deg, #fff0f5, #ffd3e0);
-  padding: 35px 22px;
-  border-radius: 24px;
+  margin-top: 65px;
 }
-.special h2 { line-height: 1.4; }
+
+.special-card {
+  padding: 30px 20px;
+  background: linear-gradient(145deg, white, #fff0f4);
+  border: 1px solid #f5d5df;
+  border-radius: 25px;
+  box-shadow: 0 12px 35px #9f345015;
+}
+
+.answer {
+  min-height: 32px;
+  margin: 15px 0;
+  color: #b5365b;
+  font-weight: bold;
+  line-height: 1.7;
+}
+
 footer {
-  padding: 35px 15px;
-  text-align: center;
-  color: #b65a77;
+  padding: 30px 15px 45px;
+  color: #a35a70;
 }
-.heart {
+
+.music-control {
   position: fixed;
+  bottom: 15px;
+  right: 12px;
+  border: 1px solid #f0bdcd;
+  border-radius: 30px;
+  background: white;
+  color: #a12e50;
+  padding: 12px 16px;
+  box-shadow: 0 5px 18px #8b2d481e;
+  z-index: 5;
+}
+
+.float-heart {
+  position: fixed;
+  pointer-events: none;
+  color: #e9577b;
+  animation: floatUp 2s ease-out forwards;
   z-index: 10;
-  pointer-events: none;
-  animation: rise 2.5s ease-out forwards;
 }
-@keyframes rise {
-  from { transform: translateY(0) scale(.6); opacity: 1; }
-  to { transform: translateY(-180px) rotate(25deg) scale(1.4); opacity: 0; }
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) scale(.7);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-150px) scale(1.4);
+    opacity: 0;
+  }
 }
-.float {
-  position: absolute;
-  color: #ed7196;
-  font-size: 28px;
-  animation: float 4s ease-in-out infinite alternate;
-  pointer-events: none;
-}
-@keyframes float {
-  to { transform: translateY(-20px) rotate(15deg); }
-}
-#answer { margin-top: 20px; font-weight: bold; }
-@media (max-width: 550px) {
-  .grid { grid-template-columns: 1fr; }
-  .hero { min-height: 70vh; padding: 70px 18px; }
+
+@media (max-width: 650px) {
+  .reason-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 65px 20px;
+  }
 }
 </style>
 </head>
 
 <body>
-<nav>for Loveee ♡</nav>
 
-<header class="hero" id="home">
-  <span class="float" style="left:10%;top:20%">♡</span>
-  <span class="float" style="right:12%;top:25%">♥</span>
-  <span class="float" style="left:20%;bottom:15%">♡</span>
-  <span class="float" style="right:20%;bottom:15%">♥</span>
+<header>For Loveee ♡</header>
 
+<section class="hero">
   <div class="script">hey, my Loveee...</div>
   <h1>I love you.</h1>
   <p>
-    A little corner of the internet made just for you.
-    A reminder that you make my world brighter
-    just by being in it. 💗
+    A tiny website for my favourite person.
+    A little reminder that you make ordinary days
+    feel special, just by being you. 💗
   </p>
-  <button class="btn" onclick="goToLetter()">
-    ♡ Open your little world
+  <button class="pill" id="startBtn">
+    ♡ Come in, my love
   </button>
-</header>
-
-<section class="content" id="letter">
-  <h2>A little love letter 💌</h2>
-  <p class="subtitle">Just a few things I want you to know.</p>
-
-  <article class="paper">
-    <p>My Loveee, ♡</p>
-    <p>
-      I hope you know how special you are to me.
-      You have this way of making my days better
-      without even trying, and I smile just thinking
-      about you.
-    </p>
-    <p>
-      Thank you for being you — for the laughs,
-      the comfort, the little things, and all the
-      moments that become my favourites because
-      you're in them.
-    </p>
-    <p>
-      If I could give you one thing, it would be
-      the chance to see yourself through my eyes.
-      Then you'd understand just how much you mean
-      to me.
-    </p>
-    <p>
-      Here's to more memories, more silly moments,
-      and more reasons to choose you every day.
-    </p>
-    <p class="signoff">Always yours, ♡</p>
-  </article>
-</section>
-
-<section class="content" id="reasons">
-  <h2>Reasons I love you 🎀</h2>
-  <p class="subtitle">And these are only a few of them...</p>
-
-  <div class="grid">
-    <article class="reason">
-      <div class="emoji">🌷</div>
-      Your kind heart and how much you care.
-    </article>
-    <article class="reason">
-      <div class="emoji">☀️</div>
-      How you make an ordinary day feel special.
-    </article>
-    <article class="reason">
-      <div class="emoji">🫶</div>
-      How comfortable I feel being myself with you.
-    </article>
-    <article class="reason">
-      <div class="emoji">🎀</div>
-      All your little habits that make you YOU.
-    </article>
-    <article class="reason">
-      <div class="emoji">🌙</div>
-      How you stay on my mind even when we're apart.
-    </article>
-    <article class="reason">
-      <div class="emoji">💗</div>
-      Because you're you, and that's my favourite thing.
-    </article>
+  <div style="font-size:24px;margin-top:20px">
+    ♡ ♥ ♡ ♥ ♡
   </div>
 </section>
 
-<section class="content" id="counter">
-  <div class="counter">
-    <h2>Our time together ♡</h2>
-    <div id="days">∞</div>
-    <strong id="dayLabel">days of us</strong>
-    <p id="counterMessage">
-      Every day with you is a memory worth keeping.
-    </p>
-  </div>
-</section>
+<main>
 
-<section class="content" id="surprise">
-  <div class="special">
-    <div class="script">one last thing...</div>
-    <h2>Loveee, will you keep being my favourite person? 💗</h2>
+  <section id="letter">
+    <h2>A little love letter 💌</h2>
+
+    <article class="letter">
+      <p class="dear">My Loveee,</p>
+
+      <p>
+        I hope you know how special you are to me.
+        You have this way of making my day better without
+        even trying, and I catch myself smiling just
+        thinking about you.
+      </p>
+
+      <p>
+        Thank you for being you — for the little things,
+        the laughs, the comfort, and all the moments that
+        somehow become my favourites because you're in them.
+      </p>
+
+      <p>
+        If I could give you one thing, it would be the chance
+        to see yourself through my eyes. Maybe then you'd
+        understand just how much you mean to me.
+      </p>
+
+      <p>
+        Here's to more memories, more silly moments,
+        and more reasons to choose you every day. 💗
+      </p>
+
+      <p class="signoff">Always yours, ♡</p>
+
+      <div style="text-align:center">
+        <button class="pill" id="surpriseBtn">
+          Open your surprise ✨
+        </button>
+        <p id="surpriseMessage"></p>
+      </div>
+    </article>
+  </section>
+
+  <section class="reasons">
+    <h2>Little reasons I love you 🌷</h2>
+
+    <div class="reason-grid">
+      <div class="reason">
+        <span>🌷</span>
+        <p>Your kind heart and the way you care about people.</p>
+      </div>
+
+      <div class="reason">
+        <span>☀️</span>
+        <p>How you can make a normal day feel like a good one.</p>
+      </div>
+
+      <div class="reason">
+        <span>🫶</span>
+        <p>The comfort I feel just being myself around you.</p>
+      </div>
+
+      <div class="reason">
+        <span>🎀</span>
+        <p>Your little habits that are so completely you.</p>
+      </div>
+
+      <div class="reason">
+        <span>🌙</span>
+        <p>The way you stay on my mind even when we're apart.</p>
+      </div>
+
+      <div class="reason">
+        <span>💗</span>
+        <p>Because it's you. You're my favourite person.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="counter">
+    <h2>Us, in every little moment ♡</h2>
+    <span class="number">32</span>
+    <strong>days of us ♡</strong>
     <p>
-      You're important to me today, tomorrow,
-      and all the days that follow.
+      32 days of memories, smiles, and having you in my life.
+      And here's to many more. 💗
     </p>
-    <button class="btn" onclick="revealSurprise()">
-      Tap for a surprise ♡
-    </button>
-    <div id="answer"></div>
-  </div>
-</section>
+  </section>
 
-<footer>Made for Loveee, with ♥ and lots of love.</footer>
+  <!-- QUESTION ONE -->
+  <section class="special" id="special">
+    <div class="special-card">
+      <div class="script">one last thing...</div>
 
-<button class="btn" id="musicButton"
-  style="position:fixed;bottom:15px;right:15px;z-index:5"
-  onclick="toggleMusic()">
-  ♫ Play music
+      <h2>Can i see uou tomorrow?</h2>
+      <p>♡</p>
+
+      <div class="answer" id="answer" aria-live="polite"></div>
+
+      <button class="pill" id="yesBtn">Yes 💗</button>
+
+      <button class="pill" id="noBtn"
+        style="background:white;color:#b5365b;border:1px solid #f0bdcd">
+        No
+      </button>
+    </div>
+  </section>
+
+  <!-- QUESTION TWO -->
+  <section class="special" id="favourite">
+    <div class="special-card">
+      <div class="script">one more little question...</div>
+
+      <h2>Loveee, will you keep being my favourite person?</h2>
+      <p>♡</p>
+
+      <div class="answer" id="favouriteAnswer" aria-live="polite"></div>
+
+      <button class="pill" id="favouriteYesBtn">
+        Yes 💗
+      </button>
+
+      <button class="pill" id="favouriteNoBtn"
+        style="background:white;color:#b5365b;border:1px solid #f0bdcd">
+        No
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Made for Loveee, with <span style="color:#e9577b">♥</span>
+  and a ridiculous amount of love.
+</footer>
+
+<button class="music-control" id="musicBtn">
+  ♫ Turn on the music
 </button>
 
 <script>
-// CUSTOMISE THIS DATE: YYYY-MM-DD
-// Example: const anniversary = "2025-06-14";
-const anniversary = "";
+const $ = (id) => document.getElementById(id);
 
-function updateCounter() {
-  if (!anniversary) return;
+// Floating hearts
+function hearts(x, y, count = 12) {
+  const symbols = ["♡", "♥", "💕", "✧"];
 
-  const start = new Date(anniversary + "T00:00:00");
-  if (Number.isNaN(start.getTime()) || start > new Date()) return;
-
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  const count = Math.floor((today - start) / 86400000) + 1;
-  document.getElementById("days").textContent =
-    count.toLocaleString();
-  document.getElementById("dayLabel").textContent =
-    count === 1 ? "day of us" : "days of us";
-  document.getElementById("counterMessage").textContent =
-    "And we're making more memories every day. ♡";
-}
-updateCounter();
-
-function makeHearts(amount = 18) {
-  const symbols = ["♡", "♥", "💕", "💗", "✧"];
-
-  for (let i = 0; i < amount; i++) {
+  for (let i = 0; i < count; i++) {
     const heart = document.createElement("span");
-    heart.className = "heart";
+
+    heart.className = "float-heart";
     heart.textContent =
       symbols[Math.floor(Math.random() * symbols.length)];
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.top = (40 + Math.random() * 50) + "vh";
-    heart.style.fontSize = (16 + Math.random() * 22) + "px";
+
+    heart.style.left =
+      (x + (Math.random() - 0.5) * 140) + "px";
+
+    heart.style.top =
+      (y + (Math.random() - 0.5) * 35) + "px";
+
+    heart.style.fontSize =
+      (16 + Math.random() * 20) + "px";
+
     document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 2600);
+
+    setTimeout(() => heart.remove(), 2200);
   }
 }
 
-function goToLetter() {
-  makeHearts();
-  document.getElementById("letter").scrollIntoView({
-    behavior: "smooth"
-  });
-}
+// Welcome button
+$("startBtn").addEventListener("click", (event) => {
+  hearts(event.clientX, event.clientY, 18);
+  $("letter").scrollIntoView({ behavior: "smooth" });
+});
 
-function revealSurprise() {
-  document.getElementById("answer").textContent =
-    "Surprise, Loveee! You're my favourite person. " +
-    "I'm so lucky to have you. I love you! 💗";
-  makeHearts(35);
-}
+// Surprise button
+$("surpriseBtn").addEventListener("click", (event) => {
+  hearts(event.clientX, event.clientY, 25);
 
-// Gentle generated melody. Tap Play music to start.
-let audio;
-let musicTimer;
-let playing = false;
-let note = 0;
-const melody = [523.25, 659.25, 783.99, 659.25,
-                587.33, 698.46, 783.99, 698.46];
+  $("surpriseMessage").textContent =
+    "Surpriseee! You are so special to me, Loveee. 💗";
+
+  $("surpriseBtn").textContent = "Surprise opened ♡";
+});
+
+// First question: tomorrow
+$("yesBtn").addEventListener("click", (event) => {
+  hearts(event.clientX, event.clientY, 30);
+
+  $("answer").textContent =
+    "YAYYY! 💗 I can't wait to see you tomorrow!";
+
+  $("yesBtn").textContent = "YAYYY 💗";
+});
+
+$("noBtn").addEventListener("click", (event) => {
+  hearts(event.clientX, event.clientY, 8);
+
+  $("answer").textContent =
+    "That's okay 💗 Thanks for letting me know.";
+});
+
+// Second question: favourite person
+$("favouriteYesBtn").addEventListener("click", (event) => {
+  hearts(event.clientX, event.clientY, 25);
+
+  $("favouriteAnswer").textContent =
+    "Always my favourite person 💗";
+});
+
+$("favouriteNoBtn").addEventListener("click", (event) => {
+  hearts(event.clientX, event.clientY, 8);
+
+  $("favouriteAnswer").textContent =
+    "You'll always be special to me 💗";
+});
+
+// Gentle music made by the browser
+let audioContext = null;
+let musicOn = false;
+let musicTimer = null;
+let noteIndex = 0;
+
+const notes = [
+  523.25, 659.25, 783.99, 659.25,
+  587.33, 698.46, 783.99, 698.46
+];
 
 function playNote() {
-  if (!playing || !audio) return;
+  if (!musicOn) return;
 
-  const osc = audio.createOscillator();
-  const gain = audio.createGain();
+  try {
+    audioContext = audioContext ||
+      new (window.AudioContext || window.webkitAudioContext)();
 
-  osc.type = "sine";
-  osc.frequency.value = melody[note++ % melody.length];
-  gain.gain.setValueAtTime(0.0001, audio.currentTime);
-  gain.gain.exponentialRampToValueAtTime(
-    0.035, audio.currentTime + 0.05
-  );
-  gain.gain.exponentialRampToValueAtTime(
-    0.0001, audio.currentTime + 0.4
-  );
-
-  osc.connect(gain);
-  gain.connect(audio.destination);
-  osc.start();
-  osc.stop(audio.currentTime + 0.42);
-}
-
-function toggleMusic() {
-  const button = document.getElementById("musicButton");
-
-  if (!playing) {
-    const AudioContext =
-      window.AudioContext || window.webkitAudioContext;
-    if (!AudioContext) {
-      button.textContent = "Music isn't supported here";
-      return;
+    if (audioContext.state === "suspended") {
+      audioContext.resume();
     }
 
-    audio = audio || new AudioContext();
-    audio.resume();
-    playing = true;
-    playNote();
-    musicTimer = setInterval(playNote, 480);
-    button.textContent = "♫ Pause music";
-  } else {
-    playing = false;
-    clearInterval(musicTimer);
-    if (audio) audio.suspend();
-    button.textContent = "♫ Play music";
+    const osc = audioContext.createOscillator();
+    const gain = audioContext.createGain();
+
+    osc.type = "sine";
+    osc.frequency.value = notes[noteIndex++ % notes.length];
+
+    gain.gain.setValueAtTime(0.0001, audioContext.currentTime);
+    gain.gain.exponentialRampToValueAtTime(
+      0.04, audioContext.currentTime + 0.04
+    );
+    gain.gain.exponentialRampToValueAtTime(
+      0.0001, audioContext.currentTime + 0.4
+    );
+
+    osc.connect(gain);
+    gain.connect(audioContext.destination);
+
+    osc.start();
+    osc.stop(audioContext.currentTime + 0.42);
+  } catch (error) {
+    // Audio may not be supported by every browser.
   }
 }
+
+$("musicBtn").addEventListener("click", () => {
+  musicOn = !musicOn;
+
+  if (musicOn) {
+    $("musicBtn").textContent = "♫ Music is on — pause";
+    playNote();
+    musicTimer = setInterval(playNote, 470);
+  } else {
+    $("musicBtn").textContent = "♫ Turn on the music";
+    clearInterval(musicTimer);
+
+    if (audioContext && audioContext.state === "running") {
+      audioContext.suspend();
+    }
+  }
+});
 </script>
+
 </body>
 </html>
